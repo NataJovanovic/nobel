@@ -233,19 +233,18 @@ import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot/+esm";
 // Create the second chart
 const chart2 = Plot.plot({
   color: { legend: true },
-  marginLeft: 150,
-  insetLeft: 0,
-  x: { grid: true },
+  width,
   marks: [
-    Plot.dot(
-      data,
-      Plot.group(
-        { r: "count" },
-        { x: "category", y: "gender", stroke: "gender", tip: true }
+    Plot.barY(
+      nobelLaureates,
+      Plot.groupX(
+        { y: "count" },
+        { x: "Born country code", fill: "Category", tip: true }
       )
-    )
+    ),
+    Plot.ruleY([0])
   ]
-});
+})
 
 // Append it to the second container
 document.querySelector("#chart2").append(chart2);
