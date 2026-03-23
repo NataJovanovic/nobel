@@ -235,10 +235,10 @@ const chart2 = Plot.plot({
   color: { legend: true },
   marks: [
     Plot.dot(
-      nobelLaureates,
+      data,
       Plot.group(
         { r: "count" },
-        { x: "Category", y: "Gender", stroke: "Category", tip: true }
+        { x: "category", y: "gender", stroke: "category", tip: true }
       )
     )
   ]
