@@ -238,7 +238,7 @@ const chart2 = Plot.plot({
       data,
       Plot.group(
         { r: "count" },
-        { x: "gender", y: "category", stroke: "Gender", tip: true }
+        { x: "gender", y: "category", stroke: "gender", tip: true }
       )
     )
   ]
